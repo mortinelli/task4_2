@@ -1,6 +1,6 @@
 #! /bin/bash
 
-timedatectl set-ntp no
+timedatectl set-ntp no > /dev/null
 apt-get update -y -qq
 apt-get install ntp -y -qq
 cp /etc/ntp.conf /etc/ntp.conf_default.bak
