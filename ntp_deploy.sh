@@ -1,6 +1,7 @@
 #! /bin/bash
 
 timedatectl set-ntp no
+apt-get update -y -qq
 apt-get install ntp -y -qq
 cp /etc/ntp.conf /etc/ntp.conf_default.bak
 sed -i '/pool*/d' /etc/ntp.conf
